@@ -39,8 +39,6 @@ interface NativeProps extends ViewProps {
 
   // props needed for Android SvgView
   hasTVPreferredFocus?: boolean;
-  borderTopEndRadius?: Float;
-  borderBottomStartRadius?: Float;
   borderBottomColor?: ColorValue;
   nextFocusDown?: Int32;
   borderRightColor?: ColorValue;
@@ -52,11 +50,9 @@ interface NativeProps extends ViewProps {
   nextFocusUp?: Int32;
   accessible?: boolean;
   borderStartColor?: ColorValue;
-  borderBottomEndRadius?: Float;
   borderEndColor?: ColorValue;
   focusable?: boolean;
   nativeBackgroundAndroid?: NativeBackgroundProp; // maybe there should a value accepted by codegen for this?
-  borderTopStartRadius?: Float;
   nativeForegroundAndroid?: NativeBackgroundProp; // maybe there should a value accepted by codegen for this?
   backfaceVisibility?: string;
   borderStyle?: string;
@@ -68,18 +64,22 @@ interface NativeProps extends ViewProps {
   // (https://github.com/facebook/react-native/blob/35556dba600fbb28e0f41340a74b6c4a59bc6018/ReactAndroid/src/main/java/com/facebook/react/uimanager/BaseViewManager.java#L613)
   // and static view config validator says that they are missing.
   // We pass them as doubles although they should be floats, and cast them to floats again on the native side.
-  borderTopRightRadius?: Double;
-  borderBottomRightRadius?: Double;
-  borderRadius?: Double;
-  borderBottomLeftRadius?: Double;
-  borderTopLeftRadius?: Double;
+  borderRadius?: UnsafeMixed<Double | string | undefined>;
+  borderTopLeftRadius?: UnsafeMixed<Double | string | undefined>;
+  borderTopRightRadius?: UnsafeMixed<Double | string | undefined>;
+  borderBottomRightRadius?: UnsafeMixed<Double | string | undefined>;
+  borderBottomLeftRadius?: UnsafeMixed<Double | string | undefined>;
+  borderTopStartRadius?: UnsafeMixed<Double | string | undefined>;
+  borderTopEndRadius?: UnsafeMixed<Double | string | undefined>;
+  borderBottomStartRadius?: UnsafeMixed<Double | string | undefined>;
+  borderBottomEndRadius?: UnsafeMixed<Double | string | undefined>;
+  borderEndEndRadius?: UnsafeMixed<Double | string | undefined>;
+  borderEndStartRadius?: UnsafeMixed<Double | string | undefined>;
+  borderStartEndRadius?: UnsafeMixed<Double | string | undefined>;
+  borderStartStartRadius?: UnsafeMixed<Double | string | undefined>;
   borderBlockColor?: ColorValue;
   borderBlockEndColor?: ColorValue;
   borderBlockStartColor?: ColorValue;
-  borderEndEndRadius?: Double;
-  borderEndStartRadius?: Double;
-  borderStartEndRadius?: Double;
-  borderStartStartRadius?: Double;
 }
 
 export default codegenNativeComponent<NativeProps>('RNSVGSvgViewAndroid', {
