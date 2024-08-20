@@ -64,19 +64,19 @@ interface NativeProps extends ViewProps {
   // (https://github.com/facebook/react-native/blob/35556dba600fbb28e0f41340a74b6c4a59bc6018/ReactAndroid/src/main/java/com/facebook/react/uimanager/BaseViewManager.java#L613)
   // and static view config validator says that they are missing.
   // We pass them as doubles although they should be floats, and cast them to floats again on the native side.
-  borderRadius?: UnsafeMixed<Double | string | undefined>;
-  borderTopLeftRadius?: UnsafeMixed<Double | string | undefined>;
-  borderTopRightRadius?: UnsafeMixed<Double | string | undefined>;
-  borderBottomRightRadius?: UnsafeMixed<Double | string | undefined>;
-  borderBottomLeftRadius?: UnsafeMixed<Double | string | undefined>;
-  borderTopStartRadius?: UnsafeMixed<Double | string | undefined>;
-  borderTopEndRadius?: UnsafeMixed<Double | string | undefined>;
-  borderBottomStartRadius?: UnsafeMixed<Double | string | undefined>;
-  borderBottomEndRadius?: UnsafeMixed<Double | string | undefined>;
-  borderEndEndRadius?: UnsafeMixed<Double | string | undefined>;
-  borderEndStartRadius?: UnsafeMixed<Double | string | undefined>;
-  borderStartEndRadius?: UnsafeMixed<Double | string | undefined>;
-  borderStartStartRadius?: UnsafeMixed<Double | string | undefined>;
+  borderRadius?: Double;
+  borderTopLeftRadius?: Double;
+  borderTopRightRadius?: Double;
+  borderBottomRightRadius?: Double;
+  borderBottomLeftRadius?: Double;
+  borderTopStartRadius?: Double;
+  borderTopEndRadius?: Double;
+  borderBottomStartRadius?: Double;
+  borderBottomEndRadius?: Double;
+  borderEndEndRadius?: Double;
+  borderEndStartRadius?: Double;
+  borderStartEndRadius?: Double;
+  borderStartStartRadius?: Double;
   borderBlockColor?: ColorValue;
   borderBlockEndColor?: ColorValue;
   borderBlockStartColor?: ColorValue;
